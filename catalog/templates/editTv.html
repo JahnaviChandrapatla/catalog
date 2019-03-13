@@ -1,0 +1,38 @@
+{% include 'nav.html' %}
+<div class="main">
+{% block content %}
+
+<div class="">
+		<div class="mr-sm-2 mb-2 col-sm-8" style="margin: 10px;">
+			<form action="{{ url_for('editTv',tvid=tvid,tvcname=tvdetails.tvtypes)}}" method="POST">
+				<div class="panel panel-info" style="border-radius:20px 20px;">
+				  <div class="panel-heading" style="background-color:#ff9933;border-radius:20px 20px;">Edit Tv Details</div>
+				  <div class="panel-body" style="background-color:#ffe6f2;">
+				  	
+					  <div class="form-group">
+					  	<label class="text-primary" style="color:#ff9933;" for="tvtypes">Enter Tv list:</label>
+					    <input type="name" class="form-control" name="tvtypes" value="{{tvdetails.tvtypes}}">
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" style="color:#ff9933;" for="description">Enter description:</label>
+					    <input type="text" class="form-control" name="description" value="{{tvdetails.description}}">
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" style="color:#ff9933;" for="price">Enter tv price:</label>
+					    <input type="text" class="form-control" name="price" value="{{tvdetails.price}}">
+					  </div>
+					  <div class="text-primary" class="form-group" style="color:#ff9933;">
+					  	<label for="rating">Enter Tv ratings:</label>
+					    <input type="text" class="form-control" name="rating" value="{{tvdetails.rating}}">
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" style="color:#ff9933;" for="inches">Enter inches:</label>
+					    <input type="text" class="form-control" name="inches" value="{{tvdetails.inches}}">
+					  </div>					  
+				  </div> 
+				  <div class="panel-footer text-center" style="background-color:#e6e6e6;border-radius:20px 20px;"><input type="submit" class="btn btn-primary" style="background-color:#6666ff;border-radius:10px 10px;" value="Edit"></div>
+				</div>
+				</form>
+			</div>
+</div>
+{% endblock content %}
